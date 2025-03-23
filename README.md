@@ -98,9 +98,9 @@ npm start
 
 ## 📱 Screenshots
 
-  - [Home Page](/src/Screenshots/Home.png)
-  - [Books Page](/src/Screenshots/Books.png)
-  - [Checkout Page](/src/Screenshots/Checkout.png)
+  - [Home Page](\src\assets\Screenshots\Home.png)
+  - [Books Page](\src\assets\Screenshots\Books.png)
+  - [Checkout Page](\src\assets\Screenshots\Checkout.png)
 
 ## 🔑 Key Features Explained
 
