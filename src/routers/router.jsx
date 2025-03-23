@@ -13,7 +13,7 @@ import AdminLogin from "../components/AdminLogin";
 import DashboardLayout from "../pages/dashboard/DashboardLayout";
 import Dashboard from "../pages/dashboard/Dashboard";
 import ManageBooks from "../pages/dashboard/manageBooks/ManageBooks";
-import AddBook from "../pages/dashboard/addBook/addBook";
+import AddBook from "../pages/dashboard/addBook/AddBook";
 import UpdateBook from "../pages/dashboard/EditBook/UpdateBook";
 import Services from "../pages/Services";
 import AboutUs from "../pages/AboutUs";
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <AboutUs/>,
+        element: <AboutUs />,
       },
       {
         path: "/cart",
@@ -67,49 +67,73 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path:"/services",
-        element : <Services/>
+        path: "/services",
+        element: <Services />,
       },
       {
-        path:"/contact",
-        element:<Contact/>
+        path: "/contact",
+        element: <Contact />,
       },
       {
-        path:"/privacy",
-        element:<PrivacyPolicy/>
+        path: "/privacy",
+        element: <PrivacyPolicy />,
       },
       {
         path: "/terms",
-        element:<Terms/>
-      }
+        element: <Terms />,
+      },
+      {
+        path: "dashboard/add-book",
+        element: <AddBook />,
+      },
     ],
   },
   {
-    path:"/admin",
-    element:<AdminLogin/>
+    path: "/admin",
+    element: <AdminLogin />,
   },
   {
-    path:"/dashboard",
-    element: <AdminRoute><DashboardLayout/></AdminRoute>, 
-    children : [
+    path: "/dashboard",
+    element: (
+      <AdminRoute>
+        <DashboardLayout />
+      </AdminRoute>
+    ),
+    children: [
       {
-        path:"",
-        element: <AdminRoute><Dashboard/></AdminRoute> 
+        path: "",
+        element: (
+          <AdminRoute>
+            <Dashboard />
+          </AdminRoute>
+        ),
       },
       {
-        path:"add-new-book",
-        element: <AdminRoute><AddBook/></AdminRoute> 
+        path: "add-new-book",
+        element: (
+          <AdminRoute>
+            <AddBook />
+          </AdminRoute>
+        ),
       },
       {
-        path : "edit-book/:id",
-        element: <AdminRoute><UpdateBook/></AdminRoute> 
+        path: "edit-book/:id",
+        element: (
+          <AdminRoute>
+            <UpdateBook />
+          </AdminRoute>
+        ),
       },
       {
-        path : "manage-books",
-        element: <AdminRoute><ManageBooks/></AdminRoute> 
-      }
-    ]
-  }
+        path: "manage-books",
+        element: (
+          <AdminRoute>
+            <ManageBooks />
+          </AdminRoute>
+        ),
+      },
+    ],
+  },
 ]);
 
 export default router;
