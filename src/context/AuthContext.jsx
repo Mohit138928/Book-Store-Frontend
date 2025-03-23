@@ -18,16 +18,16 @@ const AuthContext = createContext({
   },
 });
 
-const googleProvider = new GoogleAuthProvider()
+const googleProvider = new GoogleAuthProvider();
 
 export const useAuth = () => {
-    const context = useContext(AuthContext);
+  const context = useContext(AuthContext);
 
-    if (!context) {
-      throw new Error("useAuth must be used within an AuthProvider");
-    }
-  
-    return context;
+  if (!context) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+
+  return context;
 };
 
 // authProvider
@@ -43,8 +43,8 @@ export const AuthProvider = ({ children }) => {
 
   //login a user
   const loginUser = async (email, password) => {
-    return await signInWithEmailAndPassword(auth, email, password)
-  }
+    return await signInWithEmailAndPassword(auth, email, password);
+  };
 
   //sign in with google
   const signInWithGoogle = async () => {
@@ -55,26 +55,28 @@ export const AuthProvider = ({ children }) => {
       console.error("Google Sign In Error:", error);
       throw error;
     }
-  }
+  };
 
   // logout user
   const logOut = () => {
-    return signOut(auth)
-  }
+    return signOut(auth);
+  };
 
   //manage user
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
       setLoading(false);
-      if(user){
-        const {email, displayName, photoURL} = user;
+      if (user) {
+        const { email, displayName, photoURL } = user;
         const userData = {
-          email, username: displayName, photo: photoURL
-        }
+          email,
+          username: displayName,
+          photo: photoURL,
+        };
       }
     });
-    return ()=> unsubscribe();
+    return () => unsubscribe();
   }, []);
 
   const value = {
@@ -83,7 +85,7 @@ export const AuthProvider = ({ children }) => {
     registerUser,
     loginUser,
     signInWithGoogle,
-    logOut
+    logOut,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
