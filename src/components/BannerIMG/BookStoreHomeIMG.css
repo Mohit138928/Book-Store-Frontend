@@ -1,0 +1,47 @@
+body {
+    /* display: grid; */
+    place-content: center;
+}
+
+.homepageimg {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    place-items: center;
+}
+
+
+.firstimg {
+    width: full;
+    grid-area: 1/1;
+    top: 0;
+    left: 0;
+}
+
+.secondimg {
+    width: 75%;
+    height: 75%;
+    grid-area: 1/1;
+    top: 20px;
+    left: 0;
+    animation-name: infiniteupdown;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition: all .3s;
+}
+
+@keyframes infiniteupdown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
