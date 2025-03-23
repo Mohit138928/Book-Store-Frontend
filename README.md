@@ -10,8 +10,8 @@ A full-stack e-commerce book store application built with MERN stack (MongoDB, E
 - 📖 Book Management (CRUD Operations)
 - 🛒 Shopping Cart Functionality
 - 💳 Order Management
-- 📊 Category Filtering
-- 🔍 Search Functionality
+- 📊 Category Filtering (in progress)
+- 🔍 Search Functionality (in progress)
 
 ## 🛠️ Tech Stack
 
@@ -111,7 +111,7 @@ npm start
 
 ### User Features
 - Browse Books by Category
-- Search Functionality
+- Search Functionality (in progress)
 - Shopping Cart
 - Order History
 - User Profile
