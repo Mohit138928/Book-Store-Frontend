@@ -95,6 +95,7 @@ npm start
   - Mansi Sharma
   - GitHub: [Mansi Sharma](https://github.com/Mansi200311)
   - Role: Frontend UI Figma Design & Project Documentation
+  - Figma Design Link : [Figma Design](https://www.figma.com/design/K6uSEDLw7zvyrQSgEHj4Cg/book-store?node-id=0-1&t=Hc89qaZJQ56Bthmv-1)
 
 ## 📱 Screenshots
 
